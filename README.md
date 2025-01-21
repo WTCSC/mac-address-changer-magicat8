@@ -79,8 +79,6 @@ Check if the specified network interface exists and is spelled correctly. Verify
 ifconfig -a
 ```
 
-## Screenshots or GIFs
-
 ### Script in Action
 #### Successful MAC Address Change:
 ```text
