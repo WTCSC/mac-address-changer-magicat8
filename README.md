@@ -79,7 +79,7 @@ Check if the specified network interface exists and is spelled correctly. Verify
 ifconfig -a
 ```
 
-### Script in Action
+## Script in Action
 #### Successful MAC Address Change:
 ```text
 $ sudo ./mac_changer.sh -i eth0 -a AA:BB:CC:DD:EE:FF
