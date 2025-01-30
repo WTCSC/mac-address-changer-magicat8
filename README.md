@@ -94,3 +94,52 @@ $ ./mac_changer.sh -i eth0 -a INVALID_MAC
 Error: Invalid MAC address format. Please use format like XX:XX:XX:XX:XX:XX.
 Usage: ./mac_changer.sh [-i <eth0|eth1|...>] [-a <new-mac-address>]
 ```
+
+## Python Version
+
+### Installation and Dependencies
+
+#### Prerequisites
+1. Ensure Python 3 is installed on your system.
+2. You need administrator or sudo privileges to change MAC addresses.
+3. On Linux, the `ifconfig` command must be available (install `net-tools` if necessary).
+4. On Windows, registry modification permissions are required.
+
+#### Installation
+1. Download the Python script:
+   ```bash
+   wget https://example.com/mac_changer.py -O mac_changer.py
+   ```
+2. Ensure you have the necessary permissions to run the script.
+
+### Usage Examples
+Run the script with the required options:
+```bash
+python mac_changer.py -i <interface> -a <new-mac-address>
+```
+
+#### Example
+To change the MAC address of interface `eth0` to `AA:BB:CC:DD:EE:FF`:
+```bash
+sudo python mac_changer.py -i eth0 -a AA:BB:CC:DD:EE:FF
+```
+
+On Windows, run the script with administrator privileges:
+```powershell
+python mac_changer.py -i Ethernet -a AA:BB:CC:DD:EE:FF
+```
+
+### Error Handling and Troubleshooting
+The Python version includes similar error handling as the Bash version, ensuring:
+- Correct MAC address format validation
+- Proper interface handling
+- System compatibility detection (Windows/Linux)
+
+### Example Output
+```text
+$ sudo python mac_changer.py -i eth0 -a AA:BB:CC:DD:EE:FF
+Disabling network interface eth0...
+Changing MAC address to AA:BB:CC:DD:EE:FF...
+Enabling network interface eth0...
+MAC address changed successfully to AA:BB:CC:DD:EE:FF for interface eth0.
+```
